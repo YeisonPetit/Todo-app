@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>TODO APP</title>
+  </head>
+  <body>
+
+    <div class="succesfuly" id="succesfuly">send succesfuly
+    </div>
+
+    <header>
+      <h1>TODO APP</h1>
+    </header>
+<!-- task list -->
+    <div class="all-content">
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Añadir nueva tarea"
+          required
+        />
+        <button type="submit" id="input-button" onclick="addTask()">Add task</button>
+      </form>
+      <div class="content">
+        <ul id="todo-list"></ul>
+      </div>
+    </div>
+    <hr />
+<!-- task list counter -->
+<!-- <div class="counter-container">
+  <div id="task-counters">
+    Completed: <span id="completed-counter">0</span> | Uncompleted:
+    <span id="uncompleted-counter">0</span>
+  </div>
+</div> -->
+    <script src="app.js"></script>
+  </body>
+</html>

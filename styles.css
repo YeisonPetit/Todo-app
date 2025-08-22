@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.succesfuly{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 200px;
+    height: 60px;
+    background-color: rgb(213, 239, 213);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 3ms ease-in-out;
+
+}
+
+.succesfuly::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background-color: rgb(45, 186, 83);
+    position: absolute;
+    bottom: 0;
+    animation: width 4s linear;
+}
+
+@keyframes width {
+    from{
+        width: 0;
+    } to {
+        width: 100%;
+    }
+
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+header h1{
+    font-size: 5rem;
+    color: rgb(216, 216, 84);
+}
+
+.all-content{
+    width: 100%;
+    height: 100%;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    width: 100%;
+    margin:0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+form input{
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+}
+
+form input:focus{
+    border:  red;
+}
+
+button{
+    background-color: rgb(116, 186, 216);
+    width: 40px;
+    padding: 10px;
+    width: 100px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.content{
+    margin: 20px 200px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+}
+
+.content ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    padding: 40px;
+
+}
+.content ul li{
+    background-color:rgb(182, 179, 179);
+    width: 400px;
+    height: 50px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 30px 5px;
+    border-radius: 5px;
+    text-wrap: nowrap;
+
+}
+
+.content label input {
+    width: 20px;
+    border-radius: 20px;
+}
+
+.content label input[type="checkbox"] {
+    box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin: 6px;
+  padding: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  /* border: 1px solid gray; */
+}
+.delete-btn{
+    width: 30px;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(135, 133, 133);
+}
+@media (min-width: 427px) and (max-width: 768px){
+    header h1 {
+        font-size: 5rem;
+        margin-top: 40px;
+    }
+
+    .all-content {
+        width: 100%;
+        min-height: 100vh
+    }
+
+    .content {
+        padding: 20px;
+        width: 100%;
+        min-height: max-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start; /* Cambiado de center a start para mejor alineación */
+        gap: 20px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    
+    .content ul {
+        margin: 0; /* Elimina márgenes por defecto */
+        padding: 0; /* Elimina padding por defecto */
+        list-style: none; /* Quita los bullets si no los necesitas */
+    }
+    
+    .content ul li {
+        width: 100%; /* Cambiado para que se adapte al contenedor */
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 15px; /* Añade padding interno */
+        margin-bottom: 10px; /* Espacio entre items */
+        border-radius: 8px; /* Opcional: bordes redondeados */
+    }
+}
+
+@media (max-width: 426px) {
+    header h1 {
+        font-size: 4rem;
+        margin-top: 40px;
+    }
+
+    .all-content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content {
+        
+        padding: 20px;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+        background-color: white;
+        box-sizing: border-box;
+    }
+    
+    .content ul li {
+        width: 300px;
+        max-width: 100%;
+        background-color: red;
+        box-sizing: border-box;
+    }
+}
