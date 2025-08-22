@@ -57,11 +57,26 @@ if (todo_input.value.trim().length > 0) {
 }
 
 
+}
+
+}
 
 
-    // localStorage.setItem(list)
-}
-}
+// let todo_input = "Mi tarea importante";
+
+// function saveData() {
+//     localStorage.setItem("todo_input", todo_input);
+// }
+
+// function showList() {
+//     let data = localStorage.getItem("todo_input");
+//     console.log("Datos recuperados:", data);
+//     return data;
+// }
+
+// saveData();
+// showList();
+// console.log("Todo el localStorage:", localStorage);
 
 // checkbox.addEventListener("click", function() {
 // li.classList.toggle("completed", checkbox.checked);})
